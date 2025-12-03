@@ -1,0 +1,112 @@
+@font-face {
+  font-family: pressStart2p;
+  src: url('./assets/PressStart2P-Regular.ttf');
+}
+
+:root {
+  font-family: pressStart2p;
+  font-size: 16px;
+  --color-background: #FAFAE1;
+  --color-foreground: #D28C27;
+  --color-foreground-secondary: #007c1c;
+  --color-primary: #8a1c01;
+  --color-secondary: #33302c;
+  --color-accent: #007c1c;
+  --color-shadow: #817769;
+}
+
+:root.dark {
+  --color-background: #33302c;
+  --color-foreground: #D28C27;
+  --color-foreground: #007c1c;
+  --color-primary: #8a1c01;
+  --color-secondary: #03390f;
+  --color-accent: #007c1c ;
+  --color-shadow: #000000;
+}
+
+body {
+  background-color: var(--color-background);
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+p {
+  font-size: 0.75rem;
+}
+
+li {
+  font-size: 0.75rem;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-container {
+  width: 75%;
+  margin-block: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.route-button {
+  background-color: #8a1c01;
+  color: #D28C27;
+  padding-inline: 8px;
+  padding-block: 5px;
+  box-shadow: 3px 3px 0px var(--color-shadow);
+}
+
+.text-box {
+  background-color: var(--color-secondary);
+  color: var(--color-accent);
+  border: #007c1c solid 5px;
+  padding: 10px;
+  box-shadow: 3px 3px 0px var(--color-shadow);
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-container {
+  display: flex;
+}
+
+.about-container-large {
+
+}
+
+
+.theme-button {
+  background-color: var(--color-background);
+  border: none;
+  cursor: pointer;
+}
+
+.theme-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.footer {
+  font-size: 0.5rem;
+}
