@@ -1,24 +1,25 @@
-import Github from '@hackernoon/pixel-icon-library/icons/SVG/brands/github.svg';
-import At from '@hackernoon/pixel-icon-library/icons/SVG/regular/at.svg';
-import Linkedin from '@hackernoon/pixel-icon-library/icons/SVG/brands/linkedin.svg';
-
 const Contact = () => {
   return(
-    <div className="content-container">
+    <div className="contact-content">
       <div className='text-box'>
         <h2>&gt; Find me here:</h2>
         <p>Want to reach out about web dev or just to chat? Feel free to message me on these platforms!</p>
         <div className='contact-container'>
-          <div className='text-box'>
-            <img className='theme-icon' src={Github} alt='Github logo' />
-          </div>
-          <div className='text-box'>
-            <img className='theme-icon' src={At} alt='The symbol at' />
-
-          </div>
-          <div className='text-box'>
-            <img className='theme-icon' src={Linkedin} alt='Linkedin logo' />
-          </div>
+          <a href='https://github.com/amandauppgard' target="_blank">
+            <div className='contact-info-box'>
+              <div className='github-mask'></div>
+            </div>
+          </a>
+          <a href='mailto:amanda.uppgard.dev@gmail.com'>
+            <div className='contact-info-box'>
+              <div className='mail-mask'></div>
+            </div>
+          </a>
+          <a href='https://www.linkedin.com/in/amanda-uppgård-727325202' target="_blank">
+            <div className='contact-info-box'>
+              <div className='linkedin-mask'></div>
+            </div>
+          </a>
         </div>
       </div>
     </div>

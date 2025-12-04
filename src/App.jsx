@@ -1,8 +1,7 @@
 import {
   BrowserRouter as Router,
-  Routes, Route, Link,
-  useParams,
-  useNavigate
+  Routes, Route,
+  NavLink
 } from 'react-router-dom'
 import Home from './components/Home'
 import About from './components/About'
@@ -12,9 +11,9 @@ import ThemeToggle from './components/ThemeToggle'
 const Menu = () => {
   return (
     <div className='menu'>
-      <Link className='route-button' to='/'>Home</Link>
-      <Link className='route-button' to='/about'>About me</Link>
-      <Link className='route-button' to='/contact'>Contact</Link>
+      <NavLink className='route-button' to='/'>Home</NavLink>
+      <NavLink className='route-button' to='/about'>About me</NavLink>
+      <NavLink className='route-button' to='/contact'>Contact</NavLink>
       <ThemeToggle />
     </div>
   )
@@ -24,7 +23,7 @@ const Menu = () => {
 const Footer = () => {
   return (
     <div className='footer'>
-      <p>(c) 2025 <a href='https://github.com/amandauppgard'>amandauppgard</a>. All Rights Reserved</p>
+      <p>© 2025 <a href='https://github.com/amandauppgard'>amandauppgard</a>. All Rights Reserved</p>
     </div>
   )
 }

@@ -7,10 +7,10 @@ const Home = () => {
       </div>
       <div className="text-box">
         <h2>&gt; Latest updates:</h2>
-        <ul>
+        <ul style={{listStyle: 'none', padding: '0px'}}>
           <li>[25-11-2025] - added new feature</li>
-          <li>[24-11-2025] began implementing designs</li>
-          <li>[21-11-2025] began working on this site</li>
+          <li>[24-11-2025] - began implementing designs</li>
+          <li>[21-11-2025] - began working on this site</li>
         </ul>
       </div>
       <div className="text-box">

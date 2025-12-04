@@ -6,6 +6,7 @@
 :root {
   font-family: pressStart2p;
   font-size: 16px;
+  line-height: 125%;
   --color-background: #FAFAE1;
   --color-foreground: #D28C27;
   --color-foreground-secondary: #007c1c;
@@ -66,6 +67,14 @@ li {
 }
 
 .route-button {
+  background-color: #03390F;
+  color: #6E9A78;
+  padding-inline: 8px;
+  padding-block: 5px;
+  box-shadow: 3px 3px 0px var(--color-shadow);
+}
+
+.route-button.active {
   background-color: #8a1c01;
   color: #D28C27;
   padding-inline: 8px;
@@ -81,18 +90,84 @@ li {
   box-shadow: 3px 3px 0px var(--color-shadow);
 }
 
+.text-box:hover {
+  background-color: var(--color-secondary);
+  color: #D28C27;
+  border: #8a1c01 solid 5px;
+  padding: 10px;
+  box-shadow: 3px 3px 0px var(--color-shadow);
+}
+
+.contact-content {
+  width: 75%;
+  max-width: 950px;
+  margin-block: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px
+}
+
 .contact-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
+  gap: 15px;
   align-items: center;
+}
+
+.linkedin-mask {
+  -webkit-mask-image:url('./assets/linkedin.svg');
+  mask-image: url('./assets/linkedin.svg');
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  width: 24px;
+  height: 24px;
+  background-color: #007c1c;
+}
+
+.mail-mask {
+  -webkit-mask-image:url('./assets/at.svg');
+  mask-image: url('./assets/at.svg');
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  width: 24px;
+  height: 24px;
+  background-color: #007c1c;
+}
+
+.github-mask {
+  -webkit-mask-image:url('./assets/github.svg');
+  mask-image: url('./assets/github.svg');
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  width: 24px;
+  height: 24px;
+  background-color: #007c1c;
+}
+
+.contact-info-box {
+  background-color: #33302c;
+  color: white;
+  border: #007c1c solid 3px;
+  padding-block: 10px;
+  padding-inline: 10px;
 }
 
 .about-container {
   display: flex;
+  gap: 30px;
 }
 
 .about-container-large {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
 
+.about-container-small {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-wrap: nowrap;
 }
 
 
