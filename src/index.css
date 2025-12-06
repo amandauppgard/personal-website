@@ -8,22 +8,23 @@
   font-size: 16px;
   line-height: 125%;
   --color-background: #FAFAE1;
-  --color-foreground: #D28C27;
-  --color-foreground-secondary: #007c1c;
-  --color-primary: #8a1c01;
-  --color-secondary: #33302c;
-  --color-accent: #007c1c;
+  --color-foreground: #007c1c;
+  --color-foreground-secondary: #D28C27;
+  --color-primary: #33302c;
+  --color-secondary: #8a1c01;
+  --color-accent: #6E9A78;
+  --color-accent-secondary: #03390f;
   --color-shadow: #817769;
 }
 
 :root.dark {
   --color-background: #33302c;
-  --color-foreground: #D28C27;
   --color-foreground: #007c1c;
-  --color-primary: #8a1c01;
-  --color-secondary: #03390f;
-  --color-accent: #007c1c ;
-  --color-shadow: #000000;
+  --color-foreground-secondary: #D28C27;
+  --color-primary: #03390f;
+  --color-secondary: #8a1c01;
+  --color-accent: #6E9A78;
+  --color-shadow: #151514;
 }
 
 body {
@@ -67,33 +68,33 @@ li {
 }
 
 .route-button {
-  background-color: #03390F;
-  color: #6E9A78;
+  background-color: var(--color-accent-secondary);
+  color: var(--color-accent);
   padding-inline: 8px;
   padding-block: 5px;
   box-shadow: 3px 3px 0px var(--color-shadow);
 }
 
 .route-button.active {
-  background-color: #8a1c01;
-  color: #D28C27;
+  background-color: var(--color-secondary);
+  color: var(--color-foreground-secondary);
   padding-inline: 8px;
   padding-block: 5px;
   box-shadow: 3px 3px 0px var(--color-shadow);
 }
 
 .text-box {
-  background-color: var(--color-secondary);
+  background-color: var(--color-primary);
   color: var(--color-accent);
-  border: #007c1c solid 5px;
+  border: var(--color-foreground) solid 5px;
   padding: 10px;
   box-shadow: 3px 3px 0px var(--color-shadow);
 }
 
-.text-box:hover {
+.text-box-orange {
   background-color: var(--color-secondary);
-  color: #D28C27;
-  border: #8a1c01 solid 5px;
+  color: var(--color-foreground-secondary);
+  border: var(--color-secondary) solid 5px;
   padding: 10px;
   box-shadow: 3px 3px 0px var(--color-shadow);
 }
@@ -114,6 +115,13 @@ li {
   align-items: center;
 }
 
+.contact-info-box {
+  background-color: var(--color-primary);
+  border: var(--color-foreground) solid 3px;
+  padding-block: 10px;
+  padding-inline: 10px;
+}
+
 .linkedin-mask {
   -webkit-mask-image:url('./assets/linkedin.svg');
   mask-image: url('./assets/linkedin.svg');
@@ -121,7 +129,7 @@ li {
   mask-size: contain;
   width: 24px;
   height: 24px;
-  background-color: #007c1c;
+  background-color: var(--color-foreground);
 }
 
 .mail-mask {
@@ -131,7 +139,7 @@ li {
   mask-size: contain;
   width: 24px;
   height: 24px;
-  background-color: #007c1c;
+  background-color: var(--color-foreground);
 }
 
 .github-mask {
@@ -141,15 +149,24 @@ li {
   mask-size: contain;
   width: 24px;
   height: 24px;
-  background-color: #007c1c;
+  background-color: var(--color-foreground);
 }
 
-.contact-info-box {
-  background-color: #33302c;
-  color: white;
-  border: #007c1c solid 3px;
-  padding-block: 10px;
-  padding-inline: 10px;
+.contact-info-box:hover {
+  border-color: var(--color-foreground-secondary);
+  background-color: var(--color-secondary);
+}
+
+.contact-info-box:hover .github-mask {
+  background-color: var(--color-foreground-secondary);
+}
+
+.contact-info-box:hover .mail-mask {
+  background-color: var(--color-foreground-secondary);
+}
+
+.contact-info-box:hover .linkedin-mask {
+  background-color: var(--color-foreground-secondary);
 }
 
 .about-container {
