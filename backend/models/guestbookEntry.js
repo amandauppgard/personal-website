@@ -2,7 +2,8 @@ const mongoose = require('mongoose')
 
 const guestbookEntrySchema = new mongoose.Schema({
   signature: String,
-  text: String
+  text: String,
+  date: Date
 })
 
 guestbookEntrySchema.set('toJSON', {

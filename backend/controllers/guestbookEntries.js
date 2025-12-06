@@ -14,6 +14,8 @@ guestbookRouter.post('/', async (request, response) => {
     return response.status(400).json({error: 'missing signature or text'})
   }
 
+  entry.date = new Date()
+
   const savedEntry = await entry.save()
 
   response.status(201).json(savedEntry)
