@@ -12,9 +12,12 @@
   --color-foreground-secondary: #D28C27;
   --color-primary: #33302c;
   --color-secondary: #8a1c01;
+  --color-secondary-background: #33302c;
   --color-accent: #6E9A78;
+  --color-accent-2: #deac40;
   --color-accent-secondary: #03390f;
   --color-shadow: #817769;
+  --color-input: #fafaf0;
 }
 
 :root.dark {
@@ -23,8 +26,10 @@
   --color-foreground-secondary: #D28C27;
   --color-primary: #03390f;
   --color-secondary: #8a1c01;
+  --color-secondary-background: #4f1507;
   --color-accent: #6E9A78;
   --color-shadow: #151514;
+  --color-input: #252321;
 }
 
 body {
@@ -40,6 +45,10 @@ p {
 }
 
 li {
+  font-size: 0.75rem;
+}
+
+label {
   font-size: 0.75rem;
 }
 
@@ -197,6 +206,79 @@ li {
 .theme-icon {
   width: 24px;
   height: 24px;
+}
+
+.messages-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px
+}
+
+
+
+.guestbook-form-header {
+  color: var(--color-accent);
+  font-size: 0.85rem;
+}
+
+.guestbook-form-container {
+  color: var(--color-accent);
+  padding: 10px;
+  background-color: var(--color-primary);
+  box-shadow: 3px 3px 0px var(--color-shadow);
+  border: var(--color-foreground) solid 5px;
+
+}
+
+.guestbook-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-block: 15px;
+}
+
+.message-input {
+  display: flex;
+}
+
+.input {
+  background-color: var(--color-input);
+  color: var(--color-accent);
+  font-family: pressStart2p;
+  font-size: 0.75rem;
+  border: 2px solid var(--color-foreground);
+}
+
+.input:focus {
+}
+
+.textarea-input {
+  background-color: var(--color-input);
+  color: var(--color-accent);
+  font-family: pressStart2p;
+  font-size: 0.75rem;
+  border: 2px solid var(--color-foreground);
+  width: 100%;
+  min-height: 40px;
+}
+
+.guestbook-button {
+  display: flex;
+  justify-content: end;
+}
+
+.button {
+  font-family: pressStart2p;
+  background-color: var(--color-secondary);
+  color: var(--color-foreground-secondary);
+  padding: 10px;
+  border: 3px solid var(--color-secondary);
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--color-foreground-secondary);
+  color: var(--color-secondary);
 }
 
 .footer {
