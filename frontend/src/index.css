@@ -52,6 +52,19 @@ label {
   font-size: 0.75rem;
 }
 
+a {
+  color: var(--color-foreground-secondary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.amanda {
+  color: var(--color-foreground);
+}
+
 .wrapper {
   width: 100%;
   min-height: 100vh;

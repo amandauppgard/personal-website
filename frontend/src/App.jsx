@@ -25,7 +25,7 @@ const Menu = () => {
 const Footer = () => {
   return (
     <div className='footer'>
-      <p>© 2025 <a href='https://github.com/amandauppgard'>amandauppgard</a>. All Rights Reserved</p>
+      <p>© 2025 <a href='https://github.com/amandauppgard' className='amanda'>amandauppgard</a>. All Rights Reserved</p>
     </div>
   )
 }

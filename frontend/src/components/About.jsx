@@ -10,7 +10,8 @@ const About = () => {
           <div className="text-box">
             <h2>&gt; Projects:</h2>
             <ul>
-              <li>This website</li>
+              <li><a href="https://github.com/amandauppgard/personal-website">Personal website</a> - This website! A full-stack project built with React, Express, and MongoDB.</li>
+              <li><a href="https://github.com/project-pode/Pode">Pode</a> - A mobile application for learning Python, built with TypeScript using React Native for the frontend and Express for the backend. (Group project) </li>
             </ul>
           </div>
           <div className="text-box">
