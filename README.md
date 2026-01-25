@@ -1,6 +1,6 @@
 # Personal Website
 
-A full-stack personal website built with React and Express, featuring a dynamic guestbook, dark mode support, and a responsive design.
+A full-stack personal website built with React and Express, featuring a dynamic guestbook, dark mode support, and a responsive design. The website can be viewed at https://amanda-uppgard.onrender.com/
 
 ## Project Overview
 
