@@ -181,6 +181,10 @@ label {
 .about-container {
   display: flex;
   gap: 30px;
+
+  @media (width < 900px) {
+    flex-direction: column;
+  }
 }
 
 .about-container-large {
@@ -214,7 +218,9 @@ label {
   gap: 20px
 }
 
-
+.finished {
+  text-decoration: line-through;
+}
 
 .guestbook-form-header {
   color: var(--color-accent);
@@ -233,7 +239,7 @@ label {
 .guestbook-form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
   padding-block: 15px;
 }
 
@@ -250,6 +256,15 @@ label {
 }
 
 .input:focus {
+  outline: none;
+}
+
+.error-message {
+  color: #8a1c01;
+}
+
+.textarea-input:focus {
+  outline: none;
 }
 
 .textarea-input {

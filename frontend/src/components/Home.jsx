@@ -8,16 +8,20 @@ const Home = () => {
       <div className="text-box">
         <h2>&gt; Latest updates:</h2>
         <ul style={{listStyle: 'none', padding: '0px'}}>
-          <li>[25-11-2025] - added new feature</li>
-          <li>[24-11-2025] - began implementing designs</li>
+          <li>[25-1-2026] - launched the first version of the site!</li>
           <li>[21-11-2025] - began working on this site</li>
         </ul>
       </div>
       <div className="text-box">
         <h2>&gt; Todo:</h2>
         <ul>
-          <li>Finish and launch the first version of the site</li>
-          <li>Add a guestbook</li>
+          <li className="finished">Finish and launch the first version of the site</li>
+          <li>Improve the site’s responsiveness across different devices</li>
+          <li>Clean up the CSS file</li>
+          <li>Improve the content on the "about me" page</li>
+          <li>Look into better ways to store content</li>
+          <li>Improve guestbook validation</li>
+          <li>Limit guestbook entries loaded with pages</li>
           <li>Add a music API </li>
         </ul>
       </div>

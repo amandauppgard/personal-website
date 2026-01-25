@@ -1,8 +1,19 @@
 const mongoose = require('mongoose')
 
 const guestbookEntrySchema = new mongoose.Schema({
-  signature: String,
-  text: String,
+  signature: {
+    type: String,
+    required: true,
+    minLength: 1,
+    maxLength: 30
+  },
+  text: {
+    type: String,
+    required: true,
+    minLength: 1,
+    maxLength: 500
+  },
+
   date: Date
 })
 
