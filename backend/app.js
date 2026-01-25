@@ -24,6 +24,10 @@ app.use(middleware.requestLogger)
 
 app.use('/api/guestbook', guestbookRouter)
 
+app.get('*', (req, res) => {
+res.sendFile(path.resolve('dist', 'index.html'))
+})
+
 app.use(middleware.unknownEndpoint)
 app.use(middleware.errorHandler)
 
