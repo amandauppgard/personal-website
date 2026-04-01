@@ -19,7 +19,8 @@ const About = () => {
           <div className="text-box">
             <h2>&gt; Things I want to learn next</h2>
             <ul>
-              <li>Docker or kubernetes (or both)</li>
+              <li>Docker</li>
+              <li>kubernetes</li>
               <li>Jenkins</li>
               <li>.NET</li>
               <li>Go</li>
