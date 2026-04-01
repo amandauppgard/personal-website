@@ -1,29 +1,29 @@
 # Personal Website
 
-A full-stack personal website built with React and Express, featuring a dynamic guestbook, dark mode support, and a responsive design. The website can be viewed at https://amanda-uppgard.onrender.com/
+A full-stack personal website built with JavaScript, React, Node.js, Express and MongoDB, featuring a guestbook and dark mode support. The website can be viewed at https://amanda-uppgard.onrender.com/
 
 ## Project Overview
 
-This is my personal website showcasing a portfolio with the following features:
+This is my personal website with the following features:
 - **Home Page**: Landing page with introduction
-- **About**: Information about the owner
-- **Guestbook**: Interactive guestbook with database persistence
-- **Contact**: Contact information and form
+- **About**: Information about me, my skills, projects and future plans
+- **Guestbook**: Interactive guestbook with database persistence and backend pagination
+- **Contact**: Contact information
 - **Dark Mode**: Theme toggle for light/dark mode
 
 ## Tech Stack
 
 ### Frontend
-- **React 19** - UI library
-- **React Router 7** - Client-side routing
-- **Vite 7** - Build tool and dev server
+- **React** - UI library
+- **React Router** - Client-side routing
+- **Vite** - Build tool and dev server
 - **ESLint** - Code linting
 - **Pixel Icon Library** - Icon assets
 
 ### Backend
-- **Express 5** - Web framework
+- **Express** - Web framework
 - **MongoDB** - NoSQL database
-- **Mongoose 9** - MongoDB ODM
+- **Mongoose** - MongoDB ODM
 - **dotenv** - Environment variable management
 ```
 
@@ -68,14 +68,12 @@ This is my personal website showcasing a portfolio with the following features:
 cd backend
 npm start
 ```
-The server will run on `http://localhost:3001`
 
 **Terminal 2 - Frontend Development Server:**
 ```bash
 cd frontend
 npm run dev
 ```
-The frontend will typically run on `http://localhost:5173`
 
 ### Building for Production
 
@@ -83,40 +81,7 @@ The frontend will typically run on `http://localhost:5173`
 ```bash
 cd frontend
 npm run build
+cp -r dist ../backend
 ```
 
-This creates an optimized production build in the `frontend/dist` directory.
-
-## Available Scripts
-
-### Backend
-- `npm start` - Start the Express server
-
-### Frontend
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
-
-## API Endpoints
-
-### Guestbook
-- `GET /api/guestbook` - Retrieve all guestbook entries
-- `POST /api/guestbook` - Create a new guestbook entry
-
-## Features
-
-- Responsive design for mobile and desktop
-- Dark mode / Light mode toggle
-- Persistent guestbook with MongoDB
-- Client-side routing with React Router
-- Clean and modern UI
-- Fast development with Vite
-
-## Author
-
-Amanda Uppgård - [GitHub](https://github.com/amandauppgard)
-
-## License
-
-ISC
+This creates a production build in the `frontend/dist` directory and copies it to the backend.
