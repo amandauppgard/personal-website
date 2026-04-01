@@ -95,26 +95,67 @@ const GuestbookForm = ({ entries, setEntries }) => {
 
 const Guestbook = () => {
   const [entries, setEntries] = useState([])
+  const [page, setPage] = useState(1)
+  const [totalPages, setTotalPages] = useState(1)
 
   useEffect(() => {
-    guestbookService.getAll().then(e =>
-      setEntries(e.sort((a, b) => new Date(b.date) - new Date(a.date)))
-    )
-  }, [])
+    guestbookService.getPage(page, 5).then(res => {
+      setEntries(res.data)
+      setTotalPages(res.totalPages)
+    })
+  }, [page])
+
+  const formatDate = (date) => {
+    const d = new Date(date)
+
+    const day = d.getDate()
+    const month = d.getMonth() + 1
+    const year = d.getFullYear()
+
+    const hours = String(d.getHours()).padStart(2, '0')
+    const minutes = String(d.getMinutes()).padStart(2, '0')
+
+    return `${day}.${month}.${year} ${hours}:${minutes}`
+  }
 
   return (
     <div className="content-container">
       <GuestbookForm setEntries={setEntries} entries={entries} />
 
       <div className="messages-container">
-        {entries.map(entry => (
+        {entries ? (entries.map(entry => (
           <div className="text-box" key={entry.id}>
             <div className="message-header">
-              <p>{entry.signature} - {entry.date}</p>
+              <p>
+                {entry.signature} - {formatDate(entry.date)}
+              </p>
             </div>
           <p>{entry.text}</p>
           </div>
-        ))}
+        ))
+        ) : (
+          <p>Error - entries could not be loaded</p>
+        )
+      }
+      <div className="pagination">
+        <button
+          className="button"
+          disabled={page === 1}
+          onClick={() => setPage(page - 1)}
+        >
+          &lt;
+        </button>
+
+        <span>Page {page}/{totalPages}</span>
+
+        <button
+          className="button"
+          disabled={page === totalPages}
+          onClick={() => setPage(page + 1)}
+        >
+          &gt;
+        </button>
+      </div>
       </div>
     </div>
   )

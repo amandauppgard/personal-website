@@ -295,6 +295,13 @@ a:hover {
   justify-content: end;
 }
 
+.pagination {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
 .button {
   font-family: pressStart2p;
   background-color: var(--color-secondary);
@@ -307,6 +314,13 @@ a:hover {
 .button:hover {
   background-color: var(--color-foreground-secondary);
   color: var(--color-secondary);
+}
+
+.button:disabled {
+  background-color: var(--color-shadow);
+  color: var(--color-secondary-background);
+  border-color: var(--color-secondary-background);
+  cursor: default;
 }
 
 .footer {

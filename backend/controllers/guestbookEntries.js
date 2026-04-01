@@ -2,9 +2,25 @@ const guestbookRouter = require('express').Router()
 const GuestbookEntry = require('../models/guestbookEntry')
 
 guestbookRouter.get('/', async (request, response) => {
-  const entries = await GuestbookEntry
-    .find({})
-  response.json(entries)
+  const page = parseInt(request.query.page) || 1
+  const limit = parseInt(request.query.limit) || 10
+
+  const skip = (page - 1) * limit
+
+  const [entries, total] = await Promise.all([
+    GuestbookEntry.find({})
+      .sort({ date: -1 })
+      .skip(skip)
+      .limit(limit),
+    GuestbookEntry.countDocuments()
+  ])
+
+  response.json({
+    data: entries,
+    total,
+    page,
+    totalPages: Math.ceil(total / limit)
+  })
 })
 
 guestbookRouter.post('/', async (request, response) => {

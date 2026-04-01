@@ -18,7 +18,7 @@ const Home = () => {
         <ul>
           <li className="finished">Finish and launch the first version of the site</li>
           <li>Improve the site’s responsiveness across different devices</li>
-          <li>Add pagination to guestbook</li>
+          <li className="finished">Add pagination to guestbook</li>
           <li>Add a music API</li>
           <li>Add deployment pipeline</li>
         </ul>

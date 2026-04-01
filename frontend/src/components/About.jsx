@@ -71,6 +71,7 @@ const About = () => {
               <li>Working out</li>
               <li>Crochet</li>
               <li>Coding</li>
+              <li>Ceramics</li>
             </ul>
           </div>
       </div>

@@ -1,10 +1,14 @@
 const baseUrl = '/api/guestbook'
 
-const getAll = async () => {
-  const response = await fetch(baseUrl)
+const getPage = async (page = 1, limit = 10) => {
+  const response = await fetch(
+    `${baseUrl}?page=${page}&limit=${limit}`
+  )
+
   if (!response.ok) {
-    throw new Error('Failed to fetch guestbook entries')
+    throw new Error('Failed to fetch paginated guestbook entries')
   }
+
   return await response.json()
 }
 
@@ -27,4 +31,4 @@ const create = async (entry) => {
   return await response.json()
 }
 
-export default { getAll, create }
+export default { getPage, create }
