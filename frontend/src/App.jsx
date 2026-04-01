@@ -8,6 +8,7 @@ import About from './components/About'
 import Contact from './components/Contact'
 import ThemeToggle from './components/ThemeToggle'
 import Guestbook from './components/Guestbook'
+import NotFound from './components/NotFound'
 
 const Menu = () => {
   return (
@@ -41,6 +42,7 @@ const App = () => {
         <Route path='/about' element={<About/>} />
         <Route path='/guestbook' element={<Guestbook/>} />
         <Route path='/contact' element={<Contact/>} />
+        <Route path='*' element={<NotFound/>} />
       </Routes>
       <Footer />
       </div>
