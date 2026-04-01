@@ -5,7 +5,9 @@ const About = () => {
         <div className="about-container-large">
           <div className="text-box">
             <h2>&gt; About me</h2>
-            <p>Hi! I am a computer science student at Åbo Akademi University, aiming to complete my master’s degree in spring 2026. I wrote my bachelor’s thesis on critical security risks in web applications and methods for preventing them, and I will be writing my master’s thesis on accessibility in web applications, with a focus on memory-related conditions such as dementia and MCI. I have experience developing both web and mobile applications through a previous internship as well as personal projects.</p>
+            <p>Hi! I am a computer science student at Åbo Akademi University, aiming to complete my master’s degree in spring 2026.</p>
+            <p>I wrote my bachelor’s thesis on critical security risks in web applications and methods for preventing them, and I will be writing my master’s thesis on accessibility in web applications, with a focus on memory-related conditions such as dementia and MCI. </p>
+            <p>I have experience developing both web and mobile applications through a previous internship as well as personal projects.</p>
           </div>
           <div className="text-box">
             <h2>&gt; Projects:</h2>
@@ -17,8 +19,10 @@ const About = () => {
           <div className="text-box">
             <h2>&gt; Things I want to learn next</h2>
             <ul>
-              <li>DevOps & Docker</li>
-              <li>GraphQL</li>
+              <li>Docker or kubernetes (or both)</li>
+              <li>Jenkins</li>
+              <li>.NET</li>
+              <li>Go</li>
             </ul>
           </div>
         </div>
@@ -26,15 +30,36 @@ const About = () => {
           <div className="text-box">
             <h2>&gt; Skills</h2>
             <ul style={{listStylePosition: 'inside', paddingLeft: '20px'}}>
-              <li>JavaScript</li>
-              <li>TypeScript</li>
-              <li>React</li>
-              <li>CSS</li>
-              <li>TailWindCSS</li>
-              <li>NodeJS</li>
-              <li>MongoDB</li>
-              <li>Java</li>
-              <li>Python</li>
+              <li>Programming languages</li>
+              <ul>
+                <li>JavaScript</li>
+                <li>TypeScript</li>
+                <li>Java</li>
+                <li>Python</li>
+                <li>C#</li>
+              </ul>
+              <li>Frameworks & Libraries</li>
+              <ul>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>React Native</li>
+                <li>Next.js</li>
+                <li>Tailwind CSS</li>
+              </ul>
+              <li>Databases & Cloud</li>
+              <ul>
+                <li>MongoDB</li>
+                <li>AWS (EC2 & S3)</li>
+                <li>PostgreSQL</li>
+              </ul>
+              <li>Tools & Systems</li>
+              <ul>
+                <li>Git</li>
+                <li>Linux</li>
+                <li>Jira</li>
+                <li>Github actions (CI/CD)</li>
+              </ul>
             </ul>
           </div>
           <div className="text-box">
