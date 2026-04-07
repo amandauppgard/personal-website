@@ -101,11 +101,21 @@ const Guestbook = () => {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    guestbookService.getPage(page, 5).then(res => {
-      setEntries(res.data)
-      setTotalPages(res.totalPages)
-    })
-    setLoading(false)
+    const fetchEntries = async () => {
+      setLoading(true)
+
+      try {
+        const res = await guestbookService.getPage(page, 5)
+
+        setEntries(res.data)
+        setTotalPages(res.totalPages)
+      } catch (err) {
+        console.error(err)
+      }
+      setLoading(false)
+    }
+
+    fetchEntries()
   }, [page])
 
   const formatDate = (date) => {
