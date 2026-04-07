@@ -17,13 +17,11 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Lint frontend and create production build
+      - name: Lint frontend
         run: |
           cd frontend
           npm install
           npm run lint
-          npm run build
-          cp -r dist ../backend
 
       - name: Trigger deployement
         run: curl ${{ secrets.RENDER_DEPLOY_HOOK }}
