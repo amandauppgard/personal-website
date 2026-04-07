@@ -25,6 +25,9 @@ jobs:
           npm run build
           cp -r dist ../backend
 
+      - name: Trigger deployement
+        run: curl ${{ secrets.RENDER_DEPLOY_HOOK }}
+
       - name: Job succeeded
         if: ${{ success() }}
         uses: rjstone/discord-webhook-notify@v2.2.1
@@ -33,7 +36,7 @@ jobs:
           username: Frogbert
           avatarUrl: https://i.pinimg.com/236x/4c/28/3d/4c283d1d283f41b7ef5f538864e3ee89.jpg
           severity: info
-          text: New version of pokedex deployed
+          text: New version of personal website deployed
           title: Everything is in order!
           description: :)
 
