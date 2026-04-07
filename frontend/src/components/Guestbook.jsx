@@ -9,7 +9,7 @@ const ErrorMessage = ({error}) => {
   )
 }
 
-const GuestbookForm = ({ entries, setEntries }) => {
+const GuestbookForm = ({ setEntries }) => {
   const [signature, setSignature] = useState('')
   const [message, setMessage] = useState('')
   const [error, setError] = useState(null)
@@ -120,7 +120,7 @@ const Guestbook = () => {
 
   return (
     <div className="content-container">
-      <GuestbookForm setEntries={setEntries} entries={entries} />
+      <GuestbookForm setEntries={setEntries} />
 
       <div className="messages-container">
         {entries ? (entries.map(entry => (

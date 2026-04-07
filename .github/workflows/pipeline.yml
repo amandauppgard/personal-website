@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Lint and create production build
+      - name: Lint frontend and create production build
         run: |
           cd frontend
           npm install
