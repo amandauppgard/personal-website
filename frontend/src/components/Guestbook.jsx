@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import guestbookService from '../services/guestbookEntries'
+import Spinner from '@hackernoon/pixel-icon-library/icons/SVG/solid/spinner-solid.svg'
 
 const ErrorMessage = ({error}) => {
   if (error === null) return null
@@ -97,12 +98,14 @@ const Guestbook = () => {
   const [entries, setEntries] = useState([])
   const [page, setPage] = useState(1)
   const [totalPages, setTotalPages] = useState(1)
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     guestbookService.getPage(page, 5).then(res => {
       setEntries(res.data)
       setTotalPages(res.totalPages)
     })
+    setLoading(false)
   }, [page])
 
   const formatDate = (date) => {
@@ -123,20 +126,28 @@ const Guestbook = () => {
       <GuestbookForm setEntries={setEntries} />
 
       <div className="messages-container">
-        {entries ? (entries.map(entry => (
-          <div className="text-box" key={entry.id}>
-            <div className="message-header">
-              <p>
-                {entry.signature} - {formatDate(entry.date)}
-              </p>
-            </div>
-          <p>{entry.text}</p>
+        {loading ? (
+          <div className="spinner-container">
+            <img className='spinner' src={Spinner} alt="Loading" />
           </div>
-        ))
         ) : (
-          <p>Error - entries could not be loaded</p>
-        )
-      }
+           entries && entries.length !== 0 ? (entries.map(entry => (
+              <div className="text-box" key={entry.id}>
+                <div className="message-header">
+                  <p>
+                    {entry.signature} - {formatDate(entry.date)}
+                  </p>
+                </div>
+              <p>{entry.text}</p>
+              </div>
+            ))
+            ) : (
+              <div className="spinner-container">
+                <p>Error - entries could not be loaded</p>
+              </div>
+            )
+
+        )}
       <div className="pagination">
         <button
           className="button"

@@ -8,6 +8,7 @@ const Home = () => {
       <div className="text-box">
         <h2>&gt; Latest updates:</h2>
         <ul style={{listStyle: 'none', padding: '0px'}}>
+          <li>[07-04-2026] - added deployment pipeline</li>
           <li>[01-04-2026] - added pagination to guestbook</li>
           <li>[01-04-2026] - updated website content</li>
           <li>[25-01-2026] - launched the first version of the site!</li>
@@ -20,7 +21,7 @@ const Home = () => {
           <li>Improve the site’s responsiveness across different devices</li>
           <li className="finished">Add pagination to guestbook</li>
           <li>Add a music API</li>
-          <li>Add deployment pipeline</li>
+          <li className="finished">Add deployment pipeline</li>
         </ul>
       </div>
     </div>
